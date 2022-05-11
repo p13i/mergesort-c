@@ -75,6 +75,9 @@ int *MergeSortRecursive(int *array, int length, int left, int right)
         mergedArray[k++] = rightSide[j++];
     }
 
+    free(leftSide);
+    free(rightSide);
+
     return mergedArray;
 }
 
@@ -110,6 +113,7 @@ int main(void) {
         int expected[] = {1};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -118,6 +122,7 @@ int main(void) {
         int expected[] = {1, 2};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -126,6 +131,7 @@ int main(void) {
         int expected[] = {1, 2, 3};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -134,6 +140,7 @@ int main(void) {
         int expected[] = {1, 2, 3, 4};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -142,6 +149,7 @@ int main(void) {
         int expected[] = {1, 2, 3, 4};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -150,6 +158,7 @@ int main(void) {
         int expected[] = {1, 2, 3, 4};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -158,6 +167,7 @@ int main(void) {
         int expected[] = {-2, -1, 1, 2};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -166,6 +176,7 @@ int main(void) {
         int expected[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -174,6 +185,7 @@ int main(void) {
         int expected[] = {1, 1, 2};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -182,6 +194,7 @@ int main(void) {
         int expected[] = {1, 2, 2};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -190,6 +203,7 @@ int main(void) {
         int expected[] = {-273, -10, -8, -1, 5, 9, 10, 238, 275, 1283, 1965, 27591};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     
     {
@@ -198,6 +212,7 @@ int main(void) {
         int expected[] = {-95991, -9875, -8257, -5981, -1, 57, 192, 283, 5891, 5893, 68991, 86710, 5889329};
         int *result = MergeSort(input, length);
         ASSERT_ARR_EQ(expected, result, length);
+        free(result);
     }
     return 0;
 }
